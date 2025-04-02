@@ -29,13 +29,13 @@ pipeline {
             }
         }
 
-        // stage('Set Bucket as a Public Website') {
-        //     steps {
-        //         sh """
-        //         gsutil web set -m index.html gs://${BUCKET_NAME}/
-        //         gsutil iam ch allUsers:objectViewer gs://${BUCKET_NAME}
-        //         """
-        //     }
-        // }
+        stage('Set Bucket as a Public Website') {
+            steps {
+                sh """
+                gsutil web set -m index.html gs://${BUCKET_NAME}/
+                gsutil iam ch allUsers:objectViewer gs://${BUCKET_NAME}
+                """
+            }
+        }
     }
 }
