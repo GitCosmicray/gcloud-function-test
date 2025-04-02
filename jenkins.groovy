@@ -4,7 +4,7 @@ pipeline {
     environment {
         GCP_PROJECT_ID = 'consummate-rig-453502-q2'
         BUCKET_NAME = 'test-cloudrun-bucket'
-        CREDENTIALS_ID = 'service-acc-jenkins.json (gcp-key-uscentral1)'
+        CREDENTIALS_ID = 'service-acc-jenkins.json'
     }
 
     stages {
